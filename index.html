@@ -13,7 +13,6 @@
   --border:rgba(0,0,0,0.08);--border2:rgba(0,0,0,0.16);
   --blue:#185FA5;--blue-bg:#E6F1FB;--blue-text:#0C447C;
   --teal:#0F6E56;--teal-bg:#E1F5EE;--teal-text:#085041;
-  --amber:#854F0B;--amber-bg:#FAEEDA;--amber-text:#633806;
   --green-bg:#EAF3DE;--green-text:#3B6D11;
   --r:8px;--rl:12px;
 }
@@ -24,17 +23,17 @@
     --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.16);
     --blue-bg:#042C53;--blue-text:#B5D4F4;
     --teal-bg:#04342C;--teal-text:#9FE1CB;
-    --amber-bg:#412402;--amber-text:#FAC775;
     --green-bg:#173404;--green-text:#C0DD97;
   }
 }
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:15px}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:900px;margin:0 auto;padding:0 28px}
+.wrap{max-width:920px;margin:0 auto;padding:0 28px}
 
+/* NAV */
 nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px solid var(--border);backdrop-filter:blur(8px)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px}
-.nav-name{font-size:13px;font-weight:500;letter-spacing:-0.2px}
+.nav-name{font-size:13px;font-weight:500}
 .nav-links{display:flex;gap:20px}
 .nav-links a{font-size:13px;color:var(--text2);transition:color 0.15s}
 .nav-links a:hover{color:var(--text)}
@@ -44,10 +43,14 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .nav-cta{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:7px 14px;background:var(--text);color:var(--bg);border-radius:var(--r);transition:opacity 0.15s;margin-left:4px}
 .nav-cta:hover{opacity:0.8}
 
-.hero{padding:72px 0 56px}
-.hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:16px}
-.hero-name{font-size:42px;font-weight:500;letter-spacing:-1px;line-height:1.1;margin-bottom:12px}
-.hero-sub{font-size:17px;color:var(--text2);line-height:1.5;max-width:560px;margin-bottom:28px}
+/* HERO */
+.hero{padding:64px 0 48px}
+.hero-logos{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.hero-logo{height:32px;width:auto;object-fit:contain;opacity:0.85}
+.hero-logo-sep{width:1px;height:20px;background:var(--border2)}
+.hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.hero-name{font-size:44px;font-weight:500;letter-spacing:-1.2px;line-height:1.1;margin-bottom:12px}
+.hero-sub{font-size:17px;color:var(--text2);line-height:1.55;max-width:580px;margin-bottom:28px}
 .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:var(--r);border:0.5px solid var(--border2);color:var(--text2)}
 .badge-avail{background:var(--green-bg);color:var(--green-text);border-color:transparent;font-weight:500}
@@ -59,37 +62,48 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .btn-ghost{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;background:transparent;color:var(--text);border-radius:var(--r);font-size:13px;font-weight:500;border:0.5px solid var(--border2);cursor:pointer;transition:background 0.15s}
 .btn-ghost:hover{background:var(--bg2)}
 
-.section{padding:56px 0;border-top:0.5px solid var(--border)}
-.section-label{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:28px}
-
-.highlight-card{background:var(--teal-bg);border-radius:var(--rl);padding:24px 28px;display:flex;gap:20px;align-items:flex-start;margin-bottom:28px}
-.highlight-icon{width:40px;height:40px;border-radius:var(--r);background:rgba(15,110,86,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.highlight-title{font-size:13px;font-weight:500;color:var(--teal-text);margin-bottom:4px}
-.highlight-body{font-size:13px;color:var(--teal-text);opacity:0.85;line-height:1.55;margin-bottom:10px}
-.highlight-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:var(--teal-text);border-bottom:0.5px solid currentColor;padding-bottom:1px}
-
+/* STATS */
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:40px}
 @media(max-width:580px){.stats-row{grid-template-columns:repeat(2,1fr)}}
 .stat{background:var(--bg2);border-radius:var(--r);padding:18px;text-align:center}
 .stat-val{font-size:26px;font-weight:500;letter-spacing:-0.5px}
 .stat-lbl{font-size:12px;color:var(--text2);margin-top:3px;line-height:1.35}
 
-.projects-list{display:flex;flex-direction:column;gap:12px}
+/* SECTION */
+.section{padding:56px 0;border-top:0.5px solid var(--border)}
+.section-label{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:28px}
+
+/* PROJECT CARDS */
+.projects-list{display:flex;flex-direction:column;gap:14px}
 .project-card{background:var(--bg);border:0.5px solid var(--border);border-radius:var(--rl);overflow:hidden;transition:border-color 0.15s}
 .project-card:hover{border-color:var(--border2)}
-.project-card.featured{border-color:var(--border2)}
-.proj-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:22px 24px;cursor:pointer}
-.proj-header-left{display:flex;gap:14px;align-items:flex-start}
-.proj-num{font-size:11px;font-weight:500;color:var(--text3);margin-top:2px;min-width:20px}
-.proj-name{font-size:15px;font-weight:500;letter-spacing:-0.2px;margin-bottom:4px}
+
+/* Card top: image strip */
+.proj-image{width:100%;height:200px;object-fit:cover;display:block;background:var(--bg2)}
+.proj-image-placeholder{width:100%;height:180px;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12px;border-bottom:0.5px solid var(--border)}
+
+/* Card header row */
+.proj-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 16px;cursor:pointer}
+.proj-header-left{display:flex;gap:12px;align-items:flex-start;flex:1}
+.proj-org-logo{height:22px;width:auto;object-fit:contain;flex-shrink:0;margin-top:2px;opacity:0.9}
+.proj-org-logo-placeholder{height:22px;width:22px;border-radius:4px;background:var(--bg2);border:0.5px solid var(--border);flex-shrink:0}
+.proj-num{font-size:11px;font-weight:500;color:var(--text3);margin-top:2px;min-width:18px}
+.proj-name{font-size:15px;font-weight:500;letter-spacing:-0.2px;margin-bottom:3px;line-height:1.3}
 .proj-sub{font-size:13px;color:var(--text2);line-height:1.4}
-.proj-right{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.proj-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .proj-tags{display:flex;gap:5px;flex-wrap:wrap}
+.proj-chevron{color:var(--text3);transition:transform 0.2s;flex-shrink:0;margin-top:2px}
+
+/* Tags */
 .tag{font-size:11px;padding:3px 8px;border-radius:5px;background:var(--bg2);color:var(--text2);border:0.5px solid var(--border);white-space:nowrap}
 .tag-blue{background:var(--blue-bg);color:var(--blue-text);border-color:transparent}
 .tag-teal{background:var(--teal-bg);color:var(--teal-text);border-color:transparent}
-.proj-chevron{color:var(--text3);transition:transform 0.2s;flex-shrink:0}
-.proj-body{display:none;padding:0 24px 22px;border-top:0.5px solid var(--border)}
+.pill{font-size:10px;font-weight:500;padding:3px 8px;border-radius:4px;white-space:nowrap;margin-left:7px}
+.pill-teal{background:var(--teal-bg);color:var(--teal-text)}
+.pill-blue{background:var(--blue-bg);color:var(--blue-text)}
+
+/* Card body */
+.proj-body{display:none;padding:0 22px 22px;border-top:0.5px solid var(--border)}
 .proj-body.open{display:block}
 .proj-body-inner{padding-top:20px}
 .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
@@ -106,35 +120,44 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .btn-sm:hover{background:var(--bg2)}
 .btn-sm-primary{background:var(--text);color:var(--bg);border-color:transparent}
 .btn-sm-primary:hover{opacity:0.82;background:var(--text)}
-.featured-pill{font-size:10px;font-weight:500;padding:3px 8px;background:var(--blue-bg);color:var(--blue-text);border-radius:4px;white-space:nowrap}
-.teal-pill{font-size:10px;font-weight:500;padding:3px 8px;background:var(--teal-bg);color:var(--teal-text);border-radius:4px;white-space:nowrap;margin-left:8px}
 
-.attest-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--rl);padding:32px;position:relative;overflow:hidden}
+/* HIGHLIGHT */
+.highlight-card{background:var(--teal-bg);border-radius:var(--rl);padding:22px 26px;display:flex;gap:18px;align-items:flex-start;margin-bottom:24px}
+.highlight-icon{width:38px;height:38px;border-radius:var(--r);background:rgba(15,110,86,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.highlight-title{font-size:13px;font-weight:500;color:var(--teal-text);margin-bottom:4px}
+.highlight-body{font-size:13px;color:var(--teal-text);opacity:0.85;line-height:1.55;margin-bottom:10px}
+.highlight-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:500;color:var(--teal-text);border-bottom:0.5px solid currentColor;padding-bottom:1px}
+
+/* ATTESTATION */
+.attest-card{background:var(--bg2);border:0.5px solid var(--border);border-radius:var(--rl);padding:32px}
 .attest-quote{font-size:15px;line-height:1.75;color:var(--text2);margin-bottom:24px;max-width:680px;font-style:italic}
 .attest-quote strong{color:var(--text);font-style:normal}
-.attest-sig{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-.attest-logo{font-size:22px;font-weight:700;color:var(--teal);letter-spacing:-1px}
+.attest-sig{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.attest-org-logo{height:28px;width:auto;object-fit:contain;opacity:0.9}
 .attest-from{font-size:12px;color:var(--text2);line-height:1.5}
 .attest-from strong{color:var(--text);font-weight:500;display:block}
-.attest-dl{margin-top:20px}
 
+/* SKILLS */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
 .skill-group{background:var(--bg2);border-radius:var(--r);padding:16px 18px}
 .skill-group-name{font-size:11px;font-weight:500;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:9px}
 .skill-list{font-size:13px;color:var(--text2);line-height:1.85}
 
-.timeline{display:flex;flex-direction:column;gap:0}
-.tl-item{display:flex;gap:20px;padding-bottom:28px;position:relative}
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column}
+.tl-item{display:flex;gap:18px;padding-bottom:26px}
 .tl-item:last-child{padding-bottom:0}
 .tl-left{display:flex;flex-direction:column;align-items:center;min-width:20px}
 .tl-dot{width:10px;height:10px;border-radius:50%;background:var(--text3);border:2px solid var(--bg);flex-shrink:0;margin-top:4px}
 .tl-dot.active{background:var(--blue)}
 .tl-dot.future{background:transparent;border:1.5px dashed var(--text3)}
 .tl-line{width:1.5px;flex:1;background:var(--border2);margin:3px 0}
-.tl-period{font-size:11px;color:var(--text3);margin-bottom:3px;font-weight:500}
+.tl-period{font-size:11px;color:var(--text3);margin-bottom:2px;font-weight:500}
 .tl-role{font-size:14px;font-weight:500;margin-bottom:2px}
-.tl-org{font-size:13px;color:var(--text2)}
+.tl-org{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)}
+.tl-logo{height:16px;width:auto;object-fit:contain;opacity:0.75}
 
+/* FOOTER */
 footer{border-top:0.5px solid var(--border);padding:28px 0}
 .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .footer-text{font-size:12px;color:var(--text3)}
@@ -145,7 +168,7 @@ footer{border-top:0.5px solid var(--border);padding:28px 0}
 @media(max-width:580px){
   .hero-name{font-size:32px}
   .nav-links{display:none}
-  .highlight-card{flex-direction:column;gap:14px}
+  .highlight-card{flex-direction:column;gap:12px}
   .proj-right{display:none}
   .about-grid{grid-template-columns:1fr!important}
 }
@@ -154,6 +177,7 @@ svg{display:block}
 </head>
 <body>
 
+<!-- NAV -->
 <nav>
 <div class="wrap">
 <div class="nav-inner">
@@ -180,6 +204,11 @@ svg{display:block}
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-logos">
+    <img src="logo-epfl.png" alt="EPFL" class="hero-logo">
+    <div class="hero-logo-sep"></div>
+    <img src="logo-eth.png" alt="ETH Zürich" class="hero-logo">
+  </div>
   <div class="hero-eyebrow">
     <span data-en>Mechanical Engineering · EPFL → ETH Zürich</span>
     <span data-fr>Ingénierie Mécanique · EPFL → ETH Zürich</span>
@@ -196,14 +225,10 @@ svg{display:block}
       <span data-fr>Disponible dès septembre 2026</span>
     </span>
     <span class="badge badge-eth">
-      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2l5 3v6l-5 3-5-3V5z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
       <span data-en>M.Sc. Mechanical Engineering · ETH Zürich · Sep 2026</span>
       <span data-fr>M.Sc. Génie Mécanique · ETH Zürich · Sep 2026</span>
     </span>
-    <span class="badge">
-      <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 2C5.8 2 4 3.8 4 6c0 3 4 8 4 8s4-5 4-8c0-2.2-1.8-4-4-4z" stroke="currentColor" stroke-width="1.4"/><circle cx="8" cy="6" r="1.5" fill="currentColor"/></svg>
-      Lausanne, Switzerland
-    </span>
+    <span class="badge">Lausanne, Switzerland</span>
     <span class="badge">
       <span data-en>EPFL BSc · Jun 2026</span>
       <span data-fr>BSc EPFL · Juin 2026</span>
@@ -215,18 +240,9 @@ svg{display:block}
       <span data-en>Download full portfolio</span>
       <span data-fr>Télécharger le portfolio</span>
     </a>
-    <a class="btn-ghost" href="Van_Cauwenberghe_CV.pdf">
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 2h5l4 4v8a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      CV
-    </a>
-    <a class="btn-ghost" href="https://www.linkedin.com/in/jules-van-cauwenberghe">
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M3 5h2v8H3zM4 4a1 1 0 110-2 1 1 0 010 2zM7 5h2v1.1C9.4 5.4 10.1 5 11 5c2 0 2 1.5 2 3v5h-2V8.5c0-.8-.2-1.5-1-1.5s-1 .7-1 1.5V13H7z"/></svg>
-      LinkedIn
-    </a>
-    <a class="btn-ghost" href="mailto:jules.vancauwenberghe@epfl.ch">
-      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 4h12v9a1 1 0 01-1 1H3a1 1 0 01-1-1V4z" stroke="currentColor" stroke-width="1.3"/><path d="M2 4l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-      Email
-    </a>
+    <a class="btn-ghost" href="Van_Cauwenberghe_CV.pdf">CV</a>
+    <a class="btn-ghost" href="https://www.linkedin.com/in/jules-van-cauwenberghe">LinkedIn</a>
+    <a class="btn-ghost" href="mailto:jules.vancauwenberghe@epfl.ch">Email</a>
   </div>
 </section>
 
@@ -234,54 +250,39 @@ svg{display:block}
 <div class="stats-row">
   <div class="stat">
     <div class="stat-val">−25%</div>
-    <div class="stat-lbl">
-      <span data-en>structural mass saved · ERC rover arm</span>
-      <span data-fr>masse structurelle économisée · bras rover ERC</span>
-    </div>
+    <div class="stat-lbl"><span data-en>structural mass · ERC rover arm</span><span data-fr>masse structurelle · bras rover ERC</span></div>
   </div>
   <div class="stat">
     <div class="stat-val">32</div>
-    <div class="stat-lbl">
-      <span data-en>trainsets analysed · TL handrail project</span>
-      <span data-fr>rames analysées · projet mains courantes TL</span>
-    </div>
+    <div class="stat-lbl"><span data-en>trainsets analysed · TL project</span><span data-fr>rames analysées · projet TL</span></div>
   </div>
   <div class="stat">
     <div class="stat-val">3</div>
-    <div class="stat-lbl">
-      <span data-en>full hardware projects · concept to integration</span>
-      <span data-fr>projets matériels complets · concept à intégration</span>
-    </div>
+    <div class="stat-lbl"><span data-en>full hardware projects delivered</span><span data-fr>projets matériels complets livrés</span></div>
   </div>
   <div class="stat">
     <div class="stat-val">4<span style="font-size:16px">/51</span></div>
-    <div class="stat-lbl">
-      <span data-en>EPFL competition ranking · robotic gripper</span>
-      <span data-fr>classement compétition EPFL · préhenseur robotique</span>
-    </div>
+    <div class="stat-lbl"><span data-en>EPFL competition · robotic gripper</span><span data-fr>compétition EPFL · préhenseur robotique</span></div>
   </div>
 </div>
 
 <!-- PROJECTS -->
 <section class="section" id="projects">
-  <div class="section-label">
-    <span data-en>Projects</span><span data-fr>Projets</span>
-  </div>
+  <div class="section-label"><span data-en>Projects</span><span data-fr>Projets</span></div>
   <div class="projects-list">
 
-    <!-- TL -->
-    <div class="project-card featured" id="tl">
+    <!-- 01 TL -->
+    <div class="project-card featured">
+      <img src="img-tl.jpg" alt="Metro handrail project" class="proj-image" onerror="this.style.display='none'">
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
           <span class="proj-num">01</span>
+          <img src="logo-tl.png" alt="TL" class="proj-org-logo" onerror="this.style.display='none'">
           <div>
             <div class="proj-name">
               <span data-en>Metro handrail redesign</span>
               <span data-fr>Reconception des mains courantes du métro</span>
-              <span class="teal-pill">
-                <span data-en>Industry collab</span>
-                <span data-fr>Collaboration industrielle</span>
-              </span>
+              <span class="pill pill-teal"><span data-en>Industry collab</span><span data-fr>Collaboration industrielle</span></span>
             </div>
             <div class="proj-sub">
               <span data-en>Transports Lausannois · self-initiated · pre-industrial engineering study</span>
@@ -291,18 +292,18 @@ svg{display:block}
         </div>
         <div class="proj-right">
           <div class="proj-tags">
-            <span class="tag tag-teal">Abaqus · FEA</span>
+            <span class="tag tag-teal">FEA · Abaqus</span>
             <span class="tag tag-teal">EN 45545</span>
-            <span class="tag tag-teal">32 <span data-en>trainsets</span><span data-fr>rames</span></span>
           </div>
           <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
       </div>
       <div class="proj-body">
         <div class="proj-body-inner">
+
           <div class="highlight-card">
             <div class="highlight-icon">
-              <svg width="22" height="22" viewBox="0 0 16 16" fill="none"><path d="M4 2h5l4 4v8a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M9 2v4h4" stroke="currentColor" stroke-width="1.4"/><path d="M5 9h6M5 11.5h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><path d="M4 2h5l4 4v8a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.4"/><path d="M9 2v4h4" stroke="currentColor" stroke-width="1.4"/><path d="M5 9h6M5 11.5h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
             </div>
             <div>
               <div class="highlight-title">
@@ -310,8 +311,8 @@ svg{display:block}
                 <span data-fr>Attestation officielle de collaboration — Transports Lausannois</span>
               </div>
               <div class="highlight-body">
-                <span data-en>TL formally attests to Jules's autonomy, initiative, and analytical approach. The certificate highlights <strong>self-initiated project proposal, relevant and innovative solutions</strong>, and exemplary organisation across academic and professional requirements.</span>
-                <span data-fr>Les tl attestent formellement de l'autonomie, de l'initiative et de la rigueur analytique de Jules. L'attestation souligne la <strong>proposition autonome du projet, des solutions pertinentes et novatrices</strong>, ainsi qu'une organisation exemplaire face aux exigences académiques et professionnelles.</span>
+                <span data-en>TL formally attests to Jules's autonomy, initiative, and analytical approach — highlighting <strong>self-initiated project proposal, relevant and innovative solutions</strong>, and exemplary organisation.</span>
+                <span data-fr>Les tl attestent formellement de l'autonomie, de l'initiative et de la rigueur analytique de Jules — soulignant la <strong>proposition autonome du projet, des solutions pertinentes et novatrices</strong>, ainsi qu'une organisation exemplaire.</span>
               </div>
               <a class="highlight-link" href="Attestation_de_collaboration_-_Jules_Van_Cauwenberghe.pdf">
                 <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M3 13h10M8 3v7M5 7l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -320,65 +321,62 @@ svg{display:block}
               </a>
             </div>
           </div>
+
           <div class="proj-metrics">
             <div class="metric"><div class="metric-val">32</div><div class="metric-label"><span data-en>trainsets analysed</span><span data-fr>rames analysées</span></div></div>
-            <div class="metric"><div class="metric-val">3</div><div class="metric-label"><span data-en>rolling stock generations</span><span data-fr>générations de matériel roulant</span></div></div>
+            <div class="metric"><div class="metric-val">3</div><div class="metric-label"><span data-en>fleet generations</span><span data-fr>générations de flotte</span></div></div>
             <div class="metric"><div class="metric-val">100%</div><div class="metric-label"><span data-en>client satisfaction</span><span data-fr>satisfaction client</span></div></div>
           </div>
+
           <div class="proj-grid">
             <div>
-              <div class="proj-col-label"><span data-en>Engineering scope</span><span data-fr>Périmètre d'ingénierie</span></div>
-              <div class="proj-col-body">
-                <ul>
-                  <li><span data-en>Identified real passenger safety issue on M1 metro and proposed project to TL independently</span><span data-fr>Identification d'un problème réel de sécurité passager sur la ligne M1 et proposition du projet aux TL de manière autonome</span></li>
-                  <li><span data-en>Benchmark of metro handrail systems (Paris, CAF, Siemens, Alstom)</span><span data-fr>Benchmark des systèmes de mains courantes en métro (Paris, CAF, Siemens, Alstom)</span></li>
-                  <li><span data-en>Reverse engineering of 3 rolling stock generations — structural interfaces and constraints</span><span data-fr>Rétro-ingénierie de 3 générations de matériel roulant — interfaces structurelles et contraintes</span></li>
-                  <li><span data-en>CAD concept development + FEA validation under operational load cases</span><span data-fr>Développement de concepts CAO + validation FEA sous cas de charge opérationnels</span></li>
-                  <li><span data-en>Normative framework: EN 45545, Swiss OFT regulations, accessibility standards</span><span data-fr>Cadre normatif : EN 45545, réglementation OFT suisse, normes d'accessibilité</span></li>
-                  <li><span data-en>Supplier sourcing, cost estimation, risk analysis — full pre-industrial dossier</span><span data-fr>Recherche de fournisseurs, estimation des coûts, analyse des risques — dossier pré-industriel complet</span></li>
-                </ul>
-              </div>
+              <div class="proj-col-label"><span data-en>What was done</span><span data-fr>Ce qui a été fait</span></div>
+              <div class="proj-col-body"><ul>
+                <li><span data-en>Identified real passenger safety issue on M1 and proposed the project to TL independently</span><span data-fr>Identification d'un problème réel de sécurité sur la M1 et proposition autonome du projet aux TL</span></li>
+                <li><span data-en>Benchmark of metro handrail systems across Europe (Paris, CAF, Siemens, Alstom)</span><span data-fr>Benchmark des systèmes de mains courantes en Europe (Paris, CAF, Siemens, Alstom)</span></li>
+                <li><span data-en>Reverse engineering of 3 rolling stock generations — structural interfaces and attachment constraints</span><span data-fr>Rétro-ingénierie de 3 générations de matériel roulant — interfaces structurelles et contraintes de fixation</span></li>
+                <li><span data-en>CAD concept development of new handrail configurations (Fusion 360 / Inventor)</span><span data-fr>Développement de concepts CAO de nouvelles configurations de mains courantes (Fusion 360 / Inventor)</span></li>
+                <li><span data-en>Structural FEA study on mesh convergence analysis (Abaqus) — methodology and validation approach</span><span data-fr>Étude FEA structurelle sur l'analyse de convergence de maillage (Abaqus) — méthodologie et approche de validation</span></li>
+                <li><span data-en>Load case definition: vertical, lateral and dynamic passenger-induced loads</span><span data-fr>Définition des cas de charge : efforts passagers verticaux, latéraux et dynamiques</span></li>
+                <li><span data-en>Normative framework: EN 45545, Swiss OFT/LHand regulations, accessibility standards</span><span data-fr>Cadre normatif : EN 45545, réglementation OFT/LHand suisse, normes d'accessibilité</span></li>
+                <li><span data-en>Supplier sourcing, cost estimation, risk analysis — complete pre-industrial technical dossier</span><span data-fr>Sourcing fournisseurs, estimation des coûts, analyse des risques — dossier technique pré-industriel complet</span></li>
+              </ul></div>
             </div>
             <div>
               <div class="proj-col-label"><span data-en>Tools & standards</span><span data-fr>Outils & normes</span></div>
-              <div class="proj-col-body">
-                <ul>
-                  <li>Fusion 360 — CAD</li>
-                  <li>Inventor — <span data-en>structural interfaces</span><span data-fr>interfaces structurelles</span></li>
-                  <li>Abaqus — FEA</li>
-                  <li>EN 45545 (<span data-en>fire–smoke</span><span data-fr>feu–fumée</span>)</li>
-                  <li><span data-en>Swiss railway / OFT regulations</span><span data-fr>Réglementation ferroviaire / OFT suisse</span></li>
-                  <li><span data-en>Accessibility and load standards</span><span data-fr>Normes d'accessibilité et de charge</span></li>
-                </ul>
-              </div>
+              <div class="proj-col-body"><ul>
+                <li>Fusion 360 — CAD</li>
+                <li>Inventor — <span data-en>structural interfaces</span><span data-fr>interfaces structurelles</span></li>
+                <li>Abaqus — <span data-en>FEA · mesh convergence</span><span data-fr>FEA · convergence de maillage</span></li>
+                <li>EN 45545 (<span data-en>fire–smoke</span><span data-fr>feu–fumée</span>)</li>
+                <li><span data-en>Swiss OFT / LHand regulations</span><span data-fr>Réglementation suisse OFT / LHand</span></li>
+                <li><span data-en>Accessibility standards</span><span data-fr>Normes d'accessibilité</span></li>
+              </ul></div>
             </div>
           </div>
+
           <div class="proj-ctas">
-            <a class="btn-sm btn-sm-primary" href="Jules_VanCauwenberghe_Engineering_Portfolio.pdf">
-              <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 13h10M8 3v7M5 7l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <span data-en>Full portfolio (TL section p.17)</span>
-              <span data-fr>Portfolio complet (section TL p.17)</span>
-            </a>
-            <a class="btn-sm" href="Attestation_de_collaboration_-_Jules_Van_Cauwenberghe.pdf">
+            <a class="btn-sm btn-sm-primary" href="Attestation_de_collaboration_-_Jules_Van_Cauwenberghe.pdf">
               <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M4 2h5l4 4v8a1 1 0 01-1 1H4a1 1 0 01-1-1V3a1 1 0 011-1z" stroke="currentColor" stroke-width="1.3"/></svg>
-              <span data-en>TL attestation PDF</span>
-              <span data-fr>Attestation TL PDF</span>
+              <span data-en>TL attestation PDF</span><span data-fr>Attestation TL PDF</span>
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ERC -->
+    <!-- 02 ERC -->
     <div class="project-card">
+      <img src="img-erc.jpg" alt="EPFL Xplore robotic arm" class="proj-image" onerror="this.style.display='none'">
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
           <span class="proj-num">02</span>
+          <img src="logo-xplore.png" alt="EPFL Xplore" class="proj-org-logo" onerror="this.style.display='none'">
           <div>
             <div class="proj-name">
               <span data-en>Robotic arm structural redesign — EPFL Xplore</span>
               <span data-fr>Reconception structurelle du bras robotique — EPFL Xplore</span>
-              <span class="featured-pill" style="margin-left:8px">ERC 2025 winner</span>
+              <span class="pill pill-blue">ERC 2025 winner</span>
             </div>
             <div class="proj-sub">
               <span data-en>European Rover Challenge · sole structural engineer · −25% mass</span>
@@ -389,7 +387,6 @@ svg{display:block}
         <div class="proj-right">
           <div class="proj-tags">
             <span class="tag tag-blue">FEA · Fusion 360</span>
-            <span class="tag tag-blue"><span data-en>Sheet metal</span><span data-fr>Tôlerie</span></span>
             <span class="tag tag-blue">−750 g</span>
           </div>
           <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
@@ -400,8 +397,8 @@ svg{display:block}
           <div class="proj-metrics">
             <div class="metric"><div class="metric-val">−25%</div><div class="metric-label"><span data-en>structural mass</span><span data-fr>masse structurelle</span></div></div>
             <div class="metric"><div class="metric-val">750 g</div><div class="metric-label"><span data-en>saved vs. previous</span><span data-fr>économisés vs. précédent</span></div></div>
-            <div class="metric"><div class="metric-val">70 Nm</div><div class="metric-label"><span data-en>max joint torque validated</span><span data-fr>couple articulaire max validé</span></div></div>
-            <div class="metric"><div class="metric-val">×2</div><div class="metric-label"><span data-en>safety factor applied</span><span data-fr>facteur de sécurité appliqué</span></div></div>
+            <div class="metric"><div class="metric-val">70 Nm</div><div class="metric-label"><span data-en>max joint torque</span><span data-fr>couple articulaire max</span></div></div>
+            <div class="metric"><div class="metric-val">×2</div><div class="metric-label"><span data-en>safety factor</span><span data-fr>facteur de sécurité</span></div></div>
           </div>
           <div class="proj-grid">
             <div>
@@ -409,8 +406,8 @@ svg{display:block}
               <div class="proj-col-body"><ul>
                 <li><span data-en>Sole structural engineer — full redesign ownership from scratch</span><span data-fr>Ingénieur structure unique — responsabilité totale de la reconception</span></li>
                 <li><span data-en>Load-bearing segments, electronic enclosures, joint interfaces</span><span data-fr>Segments porteurs, boîtiers électroniques, interfaces articulaires</span></li>
-                <li><span data-en>FEM validation: Von Mises stress, deformation, buckling</span><span data-fr>Validation FEM : contraintes de Von Mises, déformation, flambage</span></li>
-                <li><span data-en>Transition from machined solids → folded sheet metal + hybrid bolted-welded</span><span data-fr>Transition de pièces usinées → tôlerie pliée + assemblages boulonné-soudé hybride</span></li>
+                <li><span data-en>FEM validation: Von Mises stress, deformation, buckling (Fusion 360)</span><span data-fr>Validation FEM : contraintes de Von Mises, déformation, flambage</span></li>
+                <li><span data-en>Transition from machined solids → folded sheet metal + hybrid bolted-welded</span><span data-fr>Transition pièces usinées → tôlerie pliée + assemblages hybrides boulonné-soudé</span></li>
                 <li><span data-en>Production drawings; components fabricated and integrated in-house</span><span data-fr>Plans de fabrication ; composants fabriqués et intégrés en interne</span></li>
               </ul></div>
             </div>
@@ -428,27 +425,28 @@ svg{display:block}
           </div>
           <div class="proj-ctas">
             <a class="btn-sm btn-sm-primary" href="Jules_VanCauwenberghe_Engineering_Portfolio.pdf">
-              <span data-en>Full portfolio (ERC section p.10)</span>
-              <span data-fr>Portfolio complet (section ERC p.10)</span>
+              <span data-en>Full portfolio (ERC section p.10)</span><span data-fr>Portfolio complet (section ERC p.10)</span>
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Forest winch -->
+    <!-- 03 Winch -->
     <div class="project-card">
+      <img src="img-winch.jpg" alt="Forest winch" class="proj-image" onerror="this.style.display='none'">
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
           <span class="proj-num">03</span>
+          <img src="logo-epfl.png" alt="EPFL" class="proj-org-logo" onerror="this.style.display='none'">
           <div>
             <div class="proj-name">
               <span data-en>Forest winch — full mechanical design</span>
               <span data-fr>Treuil forestier — conception mécanique complète</span>
             </div>
             <div class="proj-sub">
-              <span data-en>EPFL BA2 · 4-student team · complete CAD definition and production drawings</span>
-              <span data-fr>EPFL BA2 · équipe de 4 · définition CAO complète et plans de fabrication</span>
+              <span data-en>EPFL BA2 · 4-student team · complete CAD + production drawings</span>
+              <span data-fr>EPFL BA2 · équipe de 4 · CAO complète + plans de fabrication</span>
             </div>
           </div>
         </div>
@@ -456,7 +454,6 @@ svg{display:block}
           <div class="proj-tags">
             <span class="tag">CATIA V5</span>
             <span class="tag">GD&T</span>
-            <span class="tag"><span data-en>Gear transmission</span><span data-fr>Transmission par engrenages</span></span>
           </div>
           <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
@@ -467,18 +464,17 @@ svg{display:block}
             <div>
               <div class="proj-col-label"><span data-en>Scope</span><span data-fr>Périmètre</span></div>
               <div class="proj-col-body"><ul>
-                <li><span data-en>Full CAD ownership in CATIA V5 — all structural and mechanical parts</span><span data-fr>Responsabilité totale de la CAO en CATIA V5 — toutes pièces structurelles et mécaniques</span></li>
+                <li><span data-en>Full CAD ownership in CATIA V5 — all structural and mechanical parts</span><span data-fr>Responsabilité totale de la CAO en CATIA V5</span></li>
                 <li><span data-en>Assembly modelling: shaft, drum, gear system, housing</span><span data-fr>Modélisation d'assemblage : arbre, tambour, engrenages, carter</span></li>
-                <li><span data-en>2D technical drawings following ISO engineering standards</span><span data-fr>Plans techniques 2D selon les normes ISO</span></li>
-                <li><span data-en>Ratchet mechanism and anti-backdrive system</span><span data-fr>Mécanisme à cliquet et système anti-recul</span></li>
-                <li><span data-en>Force calculations and component sizing — worst-case load</span><span data-fr>Calculs d'efforts et dimensionnement — charge la plus défavorable</span></li>
+                <li><span data-en>2D technical drawings — ISO 2768 standards</span><span data-fr>Plans techniques 2D — normes ISO 2768</span></li>
+                <li><span data-en>Ratchet + anti-backdrive mechanism</span><span data-fr>Mécanisme à cliquet + système anti-recul</span></li>
+                <li><span data-en>Force calculations and component sizing</span><span data-fr>Calculs d'efforts et dimensionnement</span></li>
               </ul></div>
             </div>
             <div>
-              <div class="proj-col-label"><span data-en>Tools & context</span><span data-fr>Outils & contexte</span></div>
+              <div class="proj-col-label">Context</div>
               <div class="proj-col-body"><ul>
-                <li>CATIA V5</li>
-                <li>GD&T (ISO 2768)</li>
+                <li>CATIA V5 · GD&T</li>
                 <li>BA2 — 4 ECTS</li>
                 <li><span data-en>Team of 4</span><span data-fr>Équipe de 4</span></li>
               </ul></div>
@@ -493,11 +489,13 @@ svg{display:block}
       </div>
     </div>
 
-    <!-- Gripper -->
+    <!-- 04 Gripper -->
     <div class="project-card">
+      <img src="img-gripper.jpg" alt="Raspberry sorting gripper" class="proj-image" onerror="this.style.display='none'">
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
           <span class="proj-num">04</span>
+          <img src="logo-epfl.png" alt="EPFL" class="proj-org-logo" onerror="this.style.display='none'">
           <div>
             <div class="proj-name">
               <span data-en>Raspberry sorting gripper — autonomous robotic system</span>
@@ -513,7 +511,6 @@ svg{display:block}
           <div class="proj-tags">
             <span class="tag">Arduino</span>
             <span class="tag">OpenCV</span>
-            <span class="tag">Flask</span>
           </div>
           <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
@@ -525,8 +522,8 @@ svg{display:block}
               <div class="proj-col-label"><span data-en>My contributions</span><span data-fr>Mes contributions</span></div>
               <div class="proj-col-body"><ul>
                 <li><span data-en>Embedded programming: Arduino control of sensors and actuators</span><span data-fr>Programmation embarquée : commande Arduino des capteurs et actionneurs</span></li>
-                <li><span data-en>Vision pipeline: colour detection algorithm (OpenCV) for ripeness classification</span><span data-fr>Pipeline vision : algorithme de détection couleur (OpenCV) pour la classification de maturité</span></li>
-                <li><span data-en>Flask web app (Python + HTML/CSS) — real-time monitoring interface</span><span data-fr>Application web Flask (Python + HTML/CSS) — interface de monitoring en temps réel</span></li>
+                <li><span data-en>Vision pipeline: colour detection (OpenCV) for ripeness classification</span><span data-fr>Pipeline vision : détection couleur (OpenCV) pour classification de maturité</span></li>
+                <li><span data-en>Flask web app — real-time monitoring interface</span><span data-fr>Application web Flask — interface de monitoring en temps réel</span></li>
                 <li><span data-en>System integration: hardware–software co-design</span><span data-fr>Intégration système : co-conception matériel–logiciel</span></li>
                 <li><span data-en>Electronic architecture and wiring</span><span data-fr>Architecture électronique et câblage</span></li>
               </ul></div>
@@ -534,7 +531,7 @@ svg{display:block}
             <div>
               <div class="proj-col-label"><span data-en>Result</span><span data-fr>Résultat</span></div>
               <div class="proj-col-body"><ul>
-                <li><span data-en>4th place out of 51 teams in EPFL competition</span><span data-fr>4e place sur 51 équipes à la compétition EPFL</span></li>
+                <li><span data-en>4th / 51 teams in EPFL competition</span><span data-fr>4e / 51 équipes à la compétition EPFL</span></li>
                 <li><span data-en>Autonomous detect → pick → sort pipeline</span><span data-fr>Pipeline autonome détecter → saisir → trier</span></li>
                 <li><span data-en>Size + ripeness dual-classification</span><span data-fr>Double classification taille + maturité</span></li>
               </ul></div>
@@ -554,45 +551,34 @@ svg{display:block}
 
 <!-- EXTERNAL VALIDATION -->
 <section class="section" id="validation">
-  <div class="section-label">
-    <span data-en>External validation</span>
-    <span data-fr>Validation externe</span>
-  </div>
+  <div class="section-label"><span data-en>External validation</span><span data-fr>Validation externe</span></div>
   <div class="attest-card">
     <div class="attest-quote">
       <span data-en>"Monsieur Van Cauwenberghe demonstrated <strong>excellent professional competence</strong> in his field. We particularly appreciated his <strong>autonomy and capacity to take initiative</strong>. Having himself proposed this concrete project, he showed <strong>strong motivation and constant personal commitment</strong>. He delivered <strong>relevant and innovative solutions</strong> through his analytical thinking and drive."</span>
       <span data-fr>« Monsieur Van Cauwenberghe a fait preuve de <strong>très bonnes compétences professionnelles</strong> dans son domaine d'activité. Nous avons particulièrement apprécié son <strong>autonomie et sa capacité à prendre des initiatives</strong>. Ayant proposé lui-même ce projet concret, il a démontré une <strong>forte motivation et un investissement personnel constant</strong>. Il a su apporter des <strong>solutions pertinentes et novatrices</strong> grâce à sa réflexion analytique et son dynamisme. »</span>
     </div>
     <div class="attest-sig">
-      <div class="attest-logo">tl</div>
+      <img src="logo-tl.png" alt="Transports Lausannois" class="attest-org-logo" onerror="this.style.display='none'">
       <div class="attest-from">
         <strong>Transports Lausannois (TL)</strong>
         <span data-en>Signed by Ludmila Heitz (HR) & Régis Marchon (Training supervisor) · June 4, 2026</span>
         <span data-fr>Signé par Ludmila Heitz (RH) & Régis Marchon (Responsable formation) · 4 juin 2026</span>
       </div>
     </div>
-    <div class="attest-dl">
-      <a class="btn-sm" href="Attestation_de_collaboration_-_Jules_Van_Cauwenberghe.pdf">
-        <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 13h10M8 3v7M5 7l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span data-en>Download full attestation (PDF)</span>
-        <span data-fr>Télécharger l'attestation complète (PDF)</span>
-      </a>
-    </div>
+    <a class="btn-sm" href="Attestation_de_collaboration_-_Jules_Van_Cauwenberghe.pdf">
+      <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><path d="M3 13h10M8 3v7M5 7l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-en>Download full attestation (PDF)</span><span data-fr>Télécharger l'attestation complète (PDF)</span>
+    </a>
   </div>
 </section>
 
 <!-- SKILLS -->
 <section class="section" id="skills">
-  <div class="section-label">
-    <span data-en>Skills & tools</span><span data-fr>Compétences & outils</span>
-  </div>
+  <div class="section-label"><span data-en>Skills & tools</span><span data-fr>Compétences & outils</span></div>
   <div class="skills-grid">
     <div class="skill-group">
       <div class="skill-group-name"><span data-en>Structural engineering</span><span data-fr>Ingénierie structurelle</span></div>
-      <div class="skill-list">
-        <span data-en>Structural design<br>FEA validation<br>Interface definition<br>System integration<br>Load case analysis</span>
-        <span data-fr>Conception structurelle<br>Validation FEA<br>Définition d'interfaces<br>Intégration système<br>Analyse des cas de charge</span>
-      </div>
+      <div class="skill-list"><span data-en>Structural design<br>FEA validation<br>Mesh convergence analysis<br>Interface definition<br>System integration</span><span data-fr>Conception structurelle<br>Validation FEA<br>Analyse de convergence maillage<br>Définition d'interfaces<br>Intégration système</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-name">CAD & <span data-en>simulation</span><span data-fr>simulation</span></div>
@@ -600,10 +586,7 @@ svg{display:block}
     </div>
     <div class="skill-group">
       <div class="skill-group-name"><span data-en>Industrial context</span><span data-fr>Contexte industriel</span></div>
-      <div class="skill-list">
-        <span data-en>Railway standards (EN/ISO/OFT)<br>EN 45545 (fire–smoke)<br>Supplier sourcing<br>Cost estimation<br>Risk analysis</span>
-        <span data-fr>Normes ferroviaires (EN/ISO/OFT)<br>EN 45545 (feu–fumée)<br>Sourcing fournisseurs<br>Estimation des coûts<br>Analyse des risques</span>
-      </div>
+      <div class="skill-list"><span data-en>Railway standards (EN/ISO/OFT)<br>EN 45545 (fire–smoke)<br>Supplier sourcing<br>Cost estimation<br>Risk analysis</span><span data-fr>Normes ferroviaires (EN/ISO/OFT)<br>EN 45545 (feu–fumée)<br>Sourcing fournisseurs<br>Estimation des coûts<br>Analyse des risques</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-name"><span data-en>Programming</span><span data-fr>Programmation</span></div>
@@ -611,26 +594,18 @@ svg{display:block}
     </div>
     <div class="skill-group">
       <div class="skill-group-name"><span data-en>Manufacturing</span><span data-fr>Fabrication</span></div>
-      <div class="skill-list">
-        <span data-en>Sheet metal design<br>Additive manufacturing<br>Prototyping<br>Assembly procedures</span>
-        <span data-fr>Conception tôlerie<br>Fabrication additive<br>Prototypage<br>Procédures d'assemblage</span>
-      </div>
+      <div class="skill-list"><span data-en>Sheet metal design<br>Additive manufacturing<br>Prototyping<br>Assembly procedures</span><span data-fr>Conception tôlerie<br>Fabrication additive<br>Prototypage<br>Procédures d'assemblage</span></div>
     </div>
     <div class="skill-group">
       <div class="skill-group-name"><span data-en>Languages</span><span data-fr>Langues</span></div>
-      <div class="skill-list">
-        <span data-en>French — native<br>English — professional<br>Spanish — intermediate</span>
-        <span data-fr>Français — natif<br>Anglais — professionnel<br>Espagnol — intermédiaire</span>
-      </div>
+      <div class="skill-list"><span data-en>French — native<br>English — professional<br>Spanish — intermediate</span><span data-fr>Français — natif<br>Anglais — professionnel<br>Espagnol — intermédiaire</span></div>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="section" id="about">
-  <div class="section-label">
-    <span data-en>Trajectory</span><span data-fr>Parcours</span>
-  </div>
+  <div class="section-label"><span data-en>Trajectory</span><span data-fr>Parcours</span></div>
   <div class="about-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
     <div>
       <div class="timeline">
@@ -639,15 +614,15 @@ svg{display:block}
           <div class="tl-right">
             <div class="tl-period"><span data-en>Feb 2026 — Present</span><span data-fr>Fév 2026 — Présent</span></div>
             <div class="tl-role"><span data-en>Industry internship · Railway systems</span><span data-fr>Stage industriel · Systèmes ferroviaires</span></div>
-            <div class="tl-org">Transports Lausannois (TL)</div>
+            <div class="tl-org"><img src="logo-tl.png" alt="TL" class="tl-logo" onerror="this.style.display='none'">Transports Lausannois</div>
           </div>
         </div>
         <div class="tl-item">
           <div class="tl-left"><div class="tl-dot active"></div><div class="tl-line"></div></div>
           <div class="tl-right">
             <div class="tl-period"><span data-en>Sep 2025 — Present</span><span data-fr>Sep 2025 — Présent</span></div>
-            <div class="tl-role"><span data-en>Mechanical design engineer · Robotic arm</span><span data-fr>Ingénieur en conception mécanique · Bras robotique</span></div>
-            <div class="tl-org">EPFL Xplore — ERC</div>
+            <div class="tl-role"><span data-en>Mechanical design engineer · Robotic arm</span><span data-fr>Ingénieur conception mécanique · Bras robotique</span></div>
+            <div class="tl-org"><img src="logo-xplore.png" alt="Xplore" class="tl-logo" onerror="this.style.display='none'">EPFL Xplore — ERC</div>
           </div>
         </div>
         <div class="tl-item">
@@ -655,18 +630,15 @@ svg{display:block}
           <div class="tl-right">
             <div class="tl-period">Sep 2023 — Jun 2026</div>
             <div class="tl-role"><span data-en>BSc Mechanical Engineering</span><span data-fr>BSc Génie Mécanique</span></div>
-            <div class="tl-org">EPFL · Lausanne</div>
+            <div class="tl-org"><img src="logo-epfl.png" alt="EPFL" class="tl-logo" onerror="this.style.display='none'">EPFL · Lausanne</div>
           </div>
         </div>
         <div class="tl-item">
           <div class="tl-left"><div class="tl-dot future"></div><div class="tl-line"></div></div>
           <div class="tl-right">
             <div class="tl-period">Sep 2026 — 2028</div>
-            <div class="tl-role">
-              <span data-en>MSc Mechanical Engineering <span style="font-size:11px;color:var(--text3)">(planned)</span></span>
-              <span data-fr>MSc Génie Mécanique <span style="font-size:11px;color:var(--text3)">(prévu)</span></span>
-            </div>
-            <div class="tl-org">ETH Zürich</div>
+            <div class="tl-role"><span data-en>MSc Mechanical Engineering <span style="font-size:11px;color:var(--text3)">(planned)</span></span><span data-fr>MSc Génie Mécanique <span style="font-size:11px;color:var(--text3)">(prévu)</span></span></div>
+            <div class="tl-org"><img src="logo-eth.png" alt="ETH" class="tl-logo" onerror="this.style.display='none'">ETH Zürich</div>
           </div>
         </div>
         <div class="tl-item">
@@ -683,7 +655,7 @@ svg{display:block}
       <div class="proj-col-label" style="margin-bottom:14px"><span data-en>Profile</span><span data-fr>Profil</span></div>
       <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:16px">
         <span data-en>Mechanical engineering student at EPFL with hands-on experience delivering railway and robotic systems from concept to pre-industrial development. Focused on structural design and system integration under real manufacturing, safety, and regulatory constraints.</span>
-        <span data-fr>Étudiant en génie mécanique à l'EPFL, avec une expérience concrète dans la livraison de systèmes ferroviaires et robotiques, du concept au développement pré-industriel. Orienté conception structurelle et intégration système sous contraintes réelles de fabrication, de sécurité et de réglementation.</span>
+        <span data-fr>Étudiant en génie mécanique à l'EPFL, avec une expérience concrète dans la livraison de systèmes ferroviaires et robotiques du concept au développement pré-industriel. Orienté conception structurelle et intégration système sous contraintes réelles.</span>
       </p>
       <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px">
         <span data-en>Available from September 2026 for a gap year internship before starting an M.Sc. at ETH Zürich — targeting systems engineering, product development, or engineering consulting in high-reliability environments.</span>
@@ -703,7 +675,10 @@ svg{display:block}
 <footer>
 <div class="wrap">
 <div class="footer-inner">
-  <span class="footer-text">© 2026 Jules Van Cauwenberghe · EPFL Mechanical Engineering</span>
+  <div style="display:flex;align-items:center;gap:14px">
+    <img src="logo-epfl.png" alt="EPFL" style="height:18px;opacity:0.5" onerror="this.style.display='none'">
+    <span class="footer-text">© 2026 Jules Van Cauwenberghe</span>
+  </div>
   <div class="footer-links">
     <a class="footer-link" href="mailto:jules.vancauwenberghe@epfl.ch">jules.vancauwenberghe@epfl.ch</a>
     <a class="footer-link" href="https://www.linkedin.com/in/jules-van-cauwenberghe">LinkedIn</a>
@@ -714,20 +689,20 @@ svg{display:block}
 
 <script>
 function setLang(lang){
-  document.documentElement.setAttribute('data-lang', lang);
-  document.documentElement.setAttribute('lang', lang);
-  document.getElementById('btn-en').classList.toggle('active', lang==='en');
-  document.getElementById('btn-fr').classList.toggle('active', lang==='fr');
-  localStorage.setItem('lang', lang);
+  document.documentElement.setAttribute('data-lang',lang);
+  document.documentElement.setAttribute('lang',lang);
+  document.getElementById('btn-en').classList.toggle('active',lang==='en');
+  document.getElementById('btn-fr').classList.toggle('active',lang==='fr');
+  localStorage.setItem('lang',lang);
 }
 function toggle(header){
-  const body = header.nextElementSibling;
-  const chevron = header.querySelector('.proj-chevron');
-  const open = body.classList.toggle('open');
-  chevron.style.transform = open ? 'rotate(180deg)' : '';
+  const body=header.nextElementSibling;
+  const chevron=header.querySelector('.proj-chevron');
+  const open=body.classList.toggle('open');
+  chevron.style.transform=open?'rotate(180deg)':'';
 }
 (function(){
-  const saved = localStorage.getItem('lang') || 'en';
+  const saved=localStorage.getItem('lang')||'en';
   setLang(saved);
 })();
 </script>
