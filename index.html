@@ -81,6 +81,8 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 /* Card top: image strip */
 .proj-image{width:100%;height:200px;object-fit:cover;display:block;background:var(--bg2)}
 .proj-image-placeholder{width:100%;height:180px;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12px;border-bottom:0.5px solid var(--border)}
+.proj-image-duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-bottom:0.5px solid var(--border)}
+.proj-image-duo img{width:100%;height:200px;object-fit:cover;display:block;background:var(--bg2)}
 
 /* Card header row */
 .proj-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 16px;cursor:pointer}
@@ -273,7 +275,10 @@ svg{display:block}
 
     <!-- 01 TL -->
     <div class="project-card featured">
-      <img src="img-tl.jpg" alt="Metro handrail project" class="proj-image" onerror="this.style.display='none'">
+      <div class="proj-image-duo">
+        <img src="img-tl-1.jpg" alt="Metro handrail project" onerror="this.style.display='none'">
+        <img src="img-tl-2.jpg" alt="Metro handrail project detail" onerror="this.style.display='none'">
+      </div>
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
           <span class="proj-num">01</span>
@@ -367,7 +372,10 @@ svg{display:block}
 
     <!-- 02 ERC -->
     <div class="project-card">
-      <img src="img-erc.jpg" alt="EPFL Xplore robotic arm" class="proj-image" onerror="this.style.display='none'">
+      <div class="proj-image-duo">
+        <img src="img-erc-1.jpg" alt="EPFL Xplore robotic arm" onerror="this.style.display='none'">
+        <img src="img-erc-2.jpg" alt="EPFL Xplore robotic arm detail" onerror="this.style.display='none'">
+      </div>
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
           <span class="proj-num">02</span>
