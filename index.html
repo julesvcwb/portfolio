@@ -45,12 +45,13 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 
 /* HERO */
 .hero{padding:56px 0 36px}
-.hero-logos{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.hero-top-row{display:flex;align-items:center;gap:20px;margin-bottom:16px}
+.hero-top-left{display:flex;align-items:center;gap:12px}
 .hero-logo{height:32px;width:auto;object-fit:contain;opacity:0.85}
 .hero-logo-sep{width:1px;height:20px;background:var(--border2)}
 .hero-eyebrow{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
-.hero-name{font-size:44px;font-weight:500;letter-spacing:-1.2px;line-height:1.1;margin-bottom:12px}
-.hero-sub{font-size:17px;color:var(--text2);line-height:1.55;max-width:580px;margin-bottom:28px}
+.hero-name{font-size:40px;font-weight:500;letter-spacing:-1.2px;line-height:1.1;margin-bottom:12px;white-space:nowrap}
+.hero-sub{font-size:17px;color:var(--text2);line-height:1.55;max-width:100%;margin-bottom:28px}
 .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
 .badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 12px;border-radius:var(--r);border:0.5px solid var(--border2);color:var(--text2)}
 .badge-avail{background:var(--green-bg);color:var(--green-text);border-color:transparent;font-weight:500}
@@ -80,16 +81,16 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .project-card:hover{border-color:var(--border2)}
 
 /* Card top: image strip */
-.proj-image{width:100%;height:240px;object-fit:cover;object-position:center 30%;display:block;background:var(--bg2)}
+.proj-image{width:100%;max-height:320px;height:auto;object-fit:contain;display:block;background:var(--bg2);width:100%}
 .proj-image-placeholder{width:100%;height:180px;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12px;border-bottom:0.5px solid var(--border)}
 .proj-image-duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-bottom:0.5px solid var(--border)}
-.proj-image-duo img{width:100%;height:240px;object-fit:cover;object-position:center 30%;display:block;background:var(--bg2)}
+.proj-image-duo img{width:100%;max-height:320px;height:auto;object-fit:contain;display:block;background:var(--bg2);width:100%}
 
 /* Card header row */
 .proj-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 16px;cursor:pointer}
 .proj-header-left{display:flex;gap:12px;align-items:flex-start;flex:1}
 .proj-org-logo{height:22px;width:auto;object-fit:contain;flex-shrink:0;margin-top:2px;opacity:0.9}
-.proj-org-logo[src="logo-xplore.png"]{background:#0d1b2a;border-radius:4px;padding:2px 5px;height:26px}
+.proj-org-logo[src="logo-xplore.jpg"]{background:#0d1b2a;border-radius:4px;padding:2px 6px;height:26px}
 .proj-org-logo-placeholder{height:22px;width:22px;border-radius:4px;background:var(--bg2);border:0.5px solid var(--border);flex-shrink:0}
 .proj-num{font-size:11px;font-weight:500;color:var(--text3);margin-top:2px;min-width:18px}
 .proj-name{font-size:15px;font-weight:500;letter-spacing:-0.2px;margin-bottom:3px;line-height:1.3}
@@ -160,7 +161,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .tl-role{font-size:14px;font-weight:500;margin-bottom:2px}
 .tl-org{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)}
 .tl-logo{height:16px;width:auto;object-fit:contain;opacity:0.75}
-.tl-logo[src="logo-xplore.png"]{background:#0d1b2a;border-radius:3px;padding:1px 4px;height:18px;opacity:1}
+.tl-logo[src="logo-xplore.jpg"]{background:#0d1b2a;border-radius:3px;padding:1px 4px;height:18px;opacity:1}
 
 /* FOOTER */
 footer{border-top:0.5px solid var(--border);padding:28px 0}
@@ -209,16 +210,18 @@ svg{display:block}
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-logos">
-    <img src="logo-epfl.png" alt="EPFL" class="hero-logo">
-    <div class="hero-logo-sep"></div>
-    <img src="logo-eth.png" alt="ETH Zürich" class="hero-logo">
+  <div class="hero-top-row">
+    <div class="hero-top-left">
+      <img src="logo-epfl.png" alt="EPFL" class="hero-logo" onerror="this.style.display='none'">
+      <div class="hero-logo-sep"></div>
+      <img src="logo-eth.png" alt="ETH Zürich" class="hero-logo" onerror="this.style.display='none'">
+      <div class="hero-eyebrow">
+        <span data-en>Mechanical Engineering · EPFL → ETH Zürich</span>
+        <span data-fr>Ingénierie Mécanique · EPFL → ETH Zürich</span>
+      </div>
+    </div>
   </div>
-  <div class="hero-eyebrow">
-    <span data-en>Mechanical Engineering · EPFL → ETH Zürich</span>
-    <span data-fr>Ingénierie Mécanique · EPFL → ETH Zürich</span>
-  </div>
-  <h1 class="hero-name">Jules Van<br>Cauwenberghe</h1>
+  <h1 class="hero-name">Jules Van Cauwenberghe</h1>
   <p class="hero-sub">
     <span data-en>Structural design and system integration across railway and robotic systems — from concept to pre-industrial delivery, under real safety and regulatory constraints.</span>
     <span data-fr>Conception structurelle et intégration système dans les domaines ferroviaire et robotique — du concept au livrable pré-industriel, sous contraintes réelles de sécurité et de réglementation.</span>
@@ -362,7 +365,7 @@ svg{display:block}
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
           <span class="proj-num">02</span>
-          <img src="logo-xplore.png" alt="EPFL Xplore" class="proj-org-logo" onerror="this.style.display='none'">
+          <img src="logo-xplore.jpg" alt="EPFL Xplore" class="proj-org-logo" onerror="this.style.display='none'">
           <div>
             <div class="proj-name">
               <span data-en>Robotic arm structural redesign — EPFL Xplore</span>
@@ -633,7 +636,7 @@ svg{display:block}
           <div class="tl-right">
             <div class="tl-period"><span data-en>Sep 2025 — Present</span><span data-fr>Sep 2025 — Présent</span></div>
             <div class="tl-role"><span data-en>Mechanical design engineer · Robotic arm</span><span data-fr>Ingénieur conception mécanique · Bras robotique</span></div>
-            <div class="tl-org"><img src="logo-xplore.png" alt="Xplore" class="tl-logo" onerror="this.style.display='none'">EPFL Xplore — ERC</div>
+            <div class="tl-org"><img src="logo-xplore.jpg" alt="Xplore" class="tl-logo" onerror="this.style.display='none'">EPFL Xplore — ERC</div>
           </div>
         </div>
         <div class="tl-item">
