@@ -44,7 +44,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .nav-cta:hover{opacity:0.8}
 
 /* HERO */
-.hero{padding:64px 0 48px}
+.hero{padding:56px 0 36px}
 .hero-logos{display:flex;align-items:center;gap:16px;margin-bottom:24px}
 .hero-logo{height:32px;width:auto;object-fit:contain;opacity:0.85}
 .hero-logo-sep{width:1px;height:20px;background:var(--border2)}
@@ -63,14 +63,15 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .btn-ghost:hover{background:var(--bg2)}
 
 /* STATS */
-.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:40px}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:0}
 @media(max-width:580px){.stats-row{grid-template-columns:repeat(2,1fr)}}
 .stat{background:var(--bg2);border-radius:var(--r);padding:18px;text-align:center}
 .stat-val{font-size:26px;font-weight:500;letter-spacing:-0.5px}
 .stat-lbl{font-size:12px;color:var(--text2);margin-top:3px;line-height:1.35}
 
 /* SECTION */
-.section{padding:56px 0;border-top:0.5px solid var(--border)}
+.section{padding:48px 0;border-top:0.5px solid var(--border)}
+#projects{border-top:none;padding-top:0}
 .section-label{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:28px}
 
 /* PROJECT CARDS */
@@ -79,15 +80,16 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .project-card:hover{border-color:var(--border2)}
 
 /* Card top: image strip */
-.proj-image{width:100%;height:200px;object-fit:cover;display:block;background:var(--bg2)}
+.proj-image{width:100%;height:240px;object-fit:cover;object-position:center 30%;display:block;background:var(--bg2)}
 .proj-image-placeholder{width:100%;height:180px;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12px;border-bottom:0.5px solid var(--border)}
 .proj-image-duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-bottom:0.5px solid var(--border)}
-.proj-image-duo img{width:100%;height:200px;object-fit:cover;display:block;background:var(--bg2)}
+.proj-image-duo img{width:100%;height:240px;object-fit:cover;object-position:center 30%;display:block;background:var(--bg2)}
 
 /* Card header row */
 .proj-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 16px;cursor:pointer}
 .proj-header-left{display:flex;gap:12px;align-items:flex-start;flex:1}
 .proj-org-logo{height:22px;width:auto;object-fit:contain;flex-shrink:0;margin-top:2px;opacity:0.9}
+.proj-org-logo[src="logo-xplore.png"]{background:#0d1b2a;border-radius:4px;padding:2px 5px;height:26px}
 .proj-org-logo-placeholder{height:22px;width:22px;border-radius:4px;background:var(--bg2);border:0.5px solid var(--border);flex-shrink:0}
 .proj-num{font-size:11px;font-weight:500;color:var(--text3);margin-top:2px;min-width:18px}
 .proj-name{font-size:15px;font-weight:500;letter-spacing:-0.2px;margin-bottom:3px;line-height:1.3}
@@ -158,6 +160,7 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .tl-role{font-size:14px;font-weight:500;margin-bottom:2px}
 .tl-org{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text2)}
 .tl-logo{height:16px;width:auto;object-fit:contain;opacity:0.75}
+.tl-logo[src="logo-xplore.png"]{background:#0d1b2a;border-radius:3px;padding:1px 4px;height:18px;opacity:1}
 
 /* FOOTER */
 footer{border-top:0.5px solid var(--border);padding:28px 0}
@@ -247,26 +250,6 @@ svg{display:block}
     <a class="btn-ghost" href="mailto:jules.vancauwenberghe@epfl.ch">Email</a>
   </div>
 </section>
-
-<!-- STATS -->
-<div class="stats-row">
-  <div class="stat">
-    <div class="stat-val">−25%</div>
-    <div class="stat-lbl"><span data-en>structural mass · ERC rover arm</span><span data-fr>masse structurelle · bras rover ERC</span></div>
-  </div>
-  <div class="stat">
-    <div class="stat-val">32</div>
-    <div class="stat-lbl"><span data-en>trainsets analysed · TL project</span><span data-fr>rames analysées · projet TL</span></div>
-  </div>
-  <div class="stat">
-    <div class="stat-val">3</div>
-    <div class="stat-lbl"><span data-en>full hardware projects delivered</span><span data-fr>projets matériels complets livrés</span></div>
-  </div>
-  <div class="stat">
-    <div class="stat-val">4<span style="font-size:16px">/51</span></div>
-    <div class="stat-lbl"><span data-en>EPFL competition · robotic gripper</span><span data-fr>compétition EPFL · préhenseur robotique</span></div>
-  </div>
-</div>
 
 <!-- PROJECTS -->
 <section class="section" id="projects">
@@ -556,6 +539,26 @@ svg{display:block}
 
   </div>
 </section>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stat">
+    <div class="stat-val">−25%</div>
+    <div class="stat-lbl"><span data-en>structural mass · ERC rover arm</span><span data-fr>masse structurelle · bras rover ERC</span></div>
+  </div>
+  <div class="stat">
+    <div class="stat-val">32</div>
+    <div class="stat-lbl"><span data-en>trainsets analysed · TL project</span><span data-fr>rames analysées · projet TL</span></div>
+  </div>
+  <div class="stat">
+    <div class="stat-val">3</div>
+    <div class="stat-lbl"><span data-en>full hardware projects delivered</span><span data-fr>projets matériels complets livrés</span></div>
+  </div>
+  <div class="stat">
+    <div class="stat-val">4<span style="font-size:16px">/51</span></div>
+    <div class="stat-lbl"><span data-en>EPFL competition · robotic gripper</span><span data-fr>compétition EPFL · préhenseur robotique</span></div>
+  </div>
+</div>
 
 <!-- EXTERNAL VALIDATION -->
 <section class="section" id="validation">
