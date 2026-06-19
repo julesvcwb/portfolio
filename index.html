@@ -326,7 +326,6 @@ svg{display:block}
                 <li><span data-en>Benchmark of metro handrail systems across Europe (Paris, CAF, Siemens, Alstom)</span><span data-fr>Benchmark des systèmes de mains courantes en Europe (Paris, CAF, Siemens, Alstom)</span></li>
                 <li><span data-en>Reverse engineering of 3 rolling stock generations — structural interfaces and attachment constraints</span><span data-fr>Rétro-ingénierie de 3 générations de matériel roulant — interfaces structurelles et contraintes de fixation</span></li>
                 <li><span data-en>CAD concept development of new handrail configurations (Fusion 360 / Inventor)</span><span data-fr>Développement de concepts CAO de nouvelles configurations de mains courantes (Fusion 360 / Inventor)</span></li>
-                <li><span data-en>Structural FEA study on mesh convergence analysis (Abaqus) — methodology and validation approach</span><span data-fr>Étude FEA structurelle sur l'analyse de convergence de maillage (Abaqus) — méthodologie et approche de validation</span></li>
                 <li><span data-en>Load case definition: vertical, lateral and dynamic passenger-induced loads</span><span data-fr>Définition des cas de charge : efforts passagers verticaux, latéraux et dynamiques</span></li>
                 <li><span data-en>Normative framework: EN 45545, Swiss OFT/LHand regulations, accessibility standards</span><span data-fr>Cadre normatif : EN 45545, réglementation OFT/LHand suisse, normes d'accessibilité</span></li>
                 <li><span data-en>Supplier sourcing, cost estimation, risk analysis — complete pre-industrial technical dossier</span><span data-fr>Sourcing fournisseurs, estimation des coûts, analyse des risques — dossier technique pré-industriel complet</span></li>
@@ -424,12 +423,68 @@ svg{display:block}
       </div>
     </div>
 
-    <!-- 03 Winch -->
+    <!-- 03 Gripper -->
+    <div class="project-card">
+      <div class="proj-image-duo"><img src="img-gripper.jpg" alt="Raspberry sorting gripper real" onerror="this.style.display='none'"><img src="img-gripper-cad.jpg" alt="Raspberry sorting gripper" onerror="this.style.display='none'"></div>
+      <div class="proj-header" onclick="toggle(this)">
+        <div class="proj-header-left">
+          <span class="proj-num">03</span>
+          <img src="logo-epfl.png" alt="EPFL" class="proj-org-logo" onerror="this.style.display='none'">
+          <div>
+            <div class="proj-name">
+              <span data-en>Raspberry sorting gripper — autonomous robotic system</span>
+              <span data-fr>Préhenseur de tri de framboises — système robotique autonome</span>
+            </div>
+            <div class="proj-sub">
+              <span data-en>EPFL BA5 · 5-student team · ranked 4th / 51 teams</span>
+              <span data-fr>EPFL BA5 · équipe de 5 · classé 4e / 51 équipes</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-right">
+          <div class="proj-tags">
+            <span class="tag">Arduino</span>
+            <span class="tag">OpenCV</span>
+          </div>
+          <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-body-inner">
+          <div class="proj-grid">
+            <div>
+              <div class="proj-col-label"><span data-en>My contributions</span><span data-fr>Mes contributions</span></div>
+              <div class="proj-col-body"><ul>
+                <li><span data-en>Embedded programming: Arduino control of sensors and actuators</span><span data-fr>Programmation embarquée : commande Arduino des capteurs et actionneurs</span></li>
+                <li><span data-en>Vision pipeline: colour detection (OpenCV) for ripeness classification</span><span data-fr>Pipeline vision : détection couleur (OpenCV) pour classification de maturité</span></li>
+                <li><span data-en>Flask web app — real-time monitoring interface</span><span data-fr>Application web Flask — interface de monitoring en temps réel</span></li>
+                <li><span data-en>System integration: hardware–software co-design</span><span data-fr>Intégration système : co-conception matériel–logiciel</span></li>
+                <li><span data-en>Electronic architecture and wiring</span><span data-fr>Architecture électronique et câblage</span></li>
+              </ul></div>
+            </div>
+            <div>
+              <div class="proj-col-label"><span data-en>Result</span><span data-fr>Résultat</span></div>
+              <div class="proj-col-body"><ul>
+                <li><span data-en>4th / 51 teams in EPFL competition</span><span data-fr>4e / 51 équipes à la compétition EPFL</span></li>
+                <li><span data-en>Autonomous detect → pick → sort pipeline</span><span data-fr>Pipeline autonome détecter → saisir → trier</span></li>
+                <li><span data-en>Size + ripeness dual-classification</span><span data-fr>Double classification taille + maturité</span></li>
+              </ul></div>
+            </div>
+          </div>
+          <div class="proj-ctas">
+            <a class="btn-sm btn-sm-primary" href="Jules_VanCauwenberghe_Engineering_Portfolio.pdf">
+              <span data-en>Portfolio (p.5)</span><span data-fr>Portfolio (p.5)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 04 Winch -->
     <div class="project-card">
       <img src="img-winch.jpg" alt="Forest winch" class="proj-image" onerror="this.style.display='none'">
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
-          <span class="proj-num">03</span>
+          <span class="proj-num">04</span>
           <img src="logo-epfl.png" alt="EPFL" class="proj-org-logo" onerror="this.style.display='none'">
           <div>
             <div class="proj-name">
@@ -481,62 +536,6 @@ svg{display:block}
       </div>
     </div>
 
-    <!-- 04 Gripper -->
-    <div class="project-card">
-      <img src="img-gripper.jpg" alt="Raspberry sorting gripper" class="proj-image" onerror="this.style.display='none'">
-      <div class="proj-header" onclick="toggle(this)">
-        <div class="proj-header-left">
-          <span class="proj-num">04</span>
-          <img src="logo-epfl.png" alt="EPFL" class="proj-org-logo" onerror="this.style.display='none'">
-          <div>
-            <div class="proj-name">
-              <span data-en>Raspberry sorting gripper — autonomous robotic system</span>
-              <span data-fr>Préhenseur de tri de framboises — système robotique autonome</span>
-            </div>
-            <div class="proj-sub">
-              <span data-en>EPFL BA5 · 5-student team · ranked 4th / 51 teams</span>
-              <span data-fr>EPFL BA5 · équipe de 5 · classé 4e / 51 équipes</span>
-            </div>
-          </div>
-        </div>
-        <div class="proj-right">
-          <div class="proj-tags">
-            <span class="tag">Arduino</span>
-            <span class="tag">OpenCV</span>
-          </div>
-          <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-      </div>
-      <div class="proj-body">
-        <div class="proj-body-inner">
-          <div class="proj-grid">
-            <div>
-              <div class="proj-col-label"><span data-en>My contributions</span><span data-fr>Mes contributions</span></div>
-              <div class="proj-col-body"><ul>
-                <li><span data-en>Embedded programming: Arduino control of sensors and actuators</span><span data-fr>Programmation embarquée : commande Arduino des capteurs et actionneurs</span></li>
-                <li><span data-en>Vision pipeline: colour detection (OpenCV) for ripeness classification</span><span data-fr>Pipeline vision : détection couleur (OpenCV) pour classification de maturité</span></li>
-                <li><span data-en>Flask web app — real-time monitoring interface</span><span data-fr>Application web Flask — interface de monitoring en temps réel</span></li>
-                <li><span data-en>System integration: hardware–software co-design</span><span data-fr>Intégration système : co-conception matériel–logiciel</span></li>
-                <li><span data-en>Electronic architecture and wiring</span><span data-fr>Architecture électronique et câblage</span></li>
-              </ul></div>
-            </div>
-            <div>
-              <div class="proj-col-label"><span data-en>Result</span><span data-fr>Résultat</span></div>
-              <div class="proj-col-body"><ul>
-                <li><span data-en>4th / 51 teams in EPFL competition</span><span data-fr>4e / 51 équipes à la compétition EPFL</span></li>
-                <li><span data-en>Autonomous detect → pick → sort pipeline</span><span data-fr>Pipeline autonome détecter → saisir → trier</span></li>
-                <li><span data-en>Size + ripeness dual-classification</span><span data-fr>Double classification taille + maturité</span></li>
-              </ul></div>
-            </div>
-          </div>
-          <div class="proj-ctas">
-            <a class="btn-sm btn-sm-primary" href="Jules_VanCauwenberghe_Engineering_Portfolio.pdf">
-              <span data-en>Portfolio (p.5)</span><span data-fr>Portfolio (p.5)</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 </section>
