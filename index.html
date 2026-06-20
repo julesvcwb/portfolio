@@ -84,7 +84,9 @@ nav{position:sticky;top:0;z-index:100;background:var(--bg);border-bottom:0.5px s
 .proj-image{width:100%;max-height:320px;height:auto;object-fit:contain;display:block;background:var(--bg2);width:100%}
 .proj-image-placeholder{width:100%;height:180px;background:var(--bg2);display:flex;align-items:center;justify-content:center;color:var(--text3);font-size:12px;border-bottom:0.5px solid var(--border)}
 .proj-image-duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;border-bottom:0.5px solid var(--border)}
-.proj-image-duo img{width:100%;max-height:320px;height:auto;object-fit:contain;display:block;background:var(--bg2);width:100%}
+.proj-image-duo img{width:100%;height:220px;object-fit:cover;display:block;background:var(--bg2)}
+/* Gripper duo — show full image without cropping */
+.proj-image-duo.contain-images img{object-fit:contain;background:var(--bg2);height:240px;}
 
 /* Card header row */
 .proj-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 16px;cursor:pointer}
@@ -336,6 +338,7 @@ svg{display:block}
               <div class="proj-col-body"><ul>
                 <li>Fusion 360 — CAD</li>
                 <li>Inventor — <span data-en>structural interfaces</span><span data-fr>interfaces structurelles</span></li>
+                <li>FEA — <span data-en>structural validation</span><span data-fr>validation structurelle</span></li>
                 <li>EN 45545 (<span data-en>fire–smoke</span><span data-fr>feu–fumée</span>)</li>
                 <li><span data-en>Swiss OFT / LHand regulations</span><span data-fr>Réglementation suisse OFT / LHand</span></li>
                 <li><span data-en>Accessibility standards</span><span data-fr>Normes d'accessibilité</span></li>
@@ -425,7 +428,10 @@ svg{display:block}
 
     <!-- 03 Gripper -->
     <div class="project-card">
-      <div class="proj-image-duo"><img src="img-gripper.jpg" alt="Raspberry sorting gripper real" onerror="this.style.display='none'"><img src="img-gripper-cad.jpg" alt="Raspberry sorting gripper" onerror="this.style.display='none'"></div>
+      <div class="proj-image-duo contain-images">
+        <img src="img-gripper.jpg" alt="Raspberry sorting gripper real" onerror="this.style.display='none'">
+        <img src="img-gripper-cad.jpg" alt="Raspberry sorting gripper CAD" onerror="this.style.display='none'">
+      </div>
       <div class="proj-header" onclick="toggle(this)">
         <div class="proj-header-left">
           <span class="proj-num">03</span>
@@ -479,6 +485,7 @@ svg{display:block}
         </div>
       </div>
     </div>
+
     <!-- 04 Winch -->
     <div class="project-card">
       <img src="img-winch.jpg" alt="Forest winch" class="proj-image" onerror="this.style.display='none'">
@@ -536,6 +543,73 @@ svg{display:block}
       </div>
     </div>
 
+    <!-- 05 Abaqus FEM -->
+    <div class="project-card">
+      <div class="proj-image-duo">
+        <img src="abaqus1.jpg" alt="FEM simulation rugby post" onerror="this.style.display='none'">
+        <img src="abaqus2.jpg" alt="FEM simulation NFL post" onerror="this.style.display='none'">
+      </div>
+      <div class="proj-header" onclick="toggle(this)">
+        <div class="proj-header-left">
+          <span class="proj-num">05</span>
+          <img src="logo-epfl.png" alt="EPFL" class="proj-org-logo" onerror="this.style.display='none'">
+          <div>
+            <div class="proj-name">
+              <span data-en>FEM study — Rugby vs NFL goalposts</span>
+              <span data-fr>Étude FEM — Poteaux de rugby vs NFL</span>
+            </div>
+            <div class="proj-sub">
+              <span data-en>EPFL ME-373 · 4-student team · static &amp; modal analysis · Abaqus</span>
+              <span data-fr>EPFL ME-373 · équipe de 4 · analyse statique &amp; modale · Abaqus</span>
+            </div>
+          </div>
+        </div>
+        <div class="proj-right">
+          <div class="proj-tags">
+            <span class="tag">Abaqus</span>
+            <span class="tag">FEM</span>
+          </div>
+          <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+      </div>
+      <div class="proj-body">
+        <div class="proj-body-inner">
+          <div class="proj-metrics">
+            <div class="metric"><div class="metric-val">3</div><div class="metric-label"><span data-en>analysis types</span><span data-fr>types d'analyse</span></div></div>
+            <div class="metric"><div class="metric-val">~250k</div><div class="metric-label"><span data-en>nodes (max mesh)</span><span data-fr>nœuds (maillage max)</span></div></div>
+            <div class="metric"><div class="metric-val">×5</div><div class="metric-label"><span data-en>mesh refinement levels</span><span data-fr>niveaux de raffinement</span></div></div>
+          </div>
+          <div class="proj-grid">
+            <div>
+              <div class="proj-col-label"><span data-en>What was done</span><span data-fr>Ce qui a été fait</span></div>
+              <div class="proj-col-body"><ul>
+                <li><span data-en>Comparative FEM study of rugby and NFL goalposts under equivalent loading</span><span data-fr>Étude FEM comparative des poteaux de rugby et NFL sous chargements équivalents</span></li>
+                <li><span data-en>Static analysis — 4-person distributed load on crossbar</span><span data-fr>Analyse statique — charge répartie de 4 personnes sur la barre transversale</span></li>
+                <li><span data-en>Static analysis — parabolic wind pressure profile at 120 km/h</span><span data-fr>Analyse statique — profil de pression de vent parabolique à 120 km/h</span></li>
+                <li><span data-en>Modal analysis — first 4 natural frequencies and mode shapes</span><span data-fr>Analyse modale — 4 premières fréquences propres et modes de vibration</span></li>
+                <li><span data-en>Mesh convergence study — 5 refinement levels, &lt;10% relative error criterion</span><span data-fr>Étude de convergence de maillage — 5 niveaux, critère d'erreur relative &lt;10%</span></li>
+                <li><span data-en>Geometry modelled from official rugby and NFL regulations</span><span data-fr>Géométrie modélisée d'après les règlements officiels rugby et NFL</span></li>
+              </ul></div>
+            </div>
+            <div>
+              <div class="proj-col-label"><span data-en>Key results</span><span data-fr>Résultats clés</span></div>
+              <div class="proj-col-body"><ul>
+                <li><span data-en>Rugby post: 22% lower stress under crossbar load, 56% lower under wind</span><span data-fr>Poteau rugby : 22% de contraintes en moins sous charge barre, 56% sous vent</span></li>
+                <li><span data-en>Rugby post: natural frequencies 15–22% higher (modes 1–3) → stiffer globally</span><span data-fr>Poteau rugby : fréquences propres 15–22% plus élevées (modes 1–3) → plus rigide</span></li>
+                <li><span data-en>NFL post: 304.8 mm tip displacement vs 248.5 mm for rugby under wind</span><span data-fr>Poteau NFL : 304.8 mm de déplacement en tête vs 248.5 mm pour le rugby sous vent</span></li>
+                <li><span data-en>Both structures remain within elastic domain (S235 steel, σ_y = 235 MPa)</span><span data-fr>Les deux structures restent dans le domaine élastique (acier S235, σ_y = 235 MPa)</span></li>
+                <li><span data-en>Material: S235 structural steel — E = 210 GPa, ν = 0.30</span><span data-fr>Matériau : acier structural S235 — E = 210 GPa, ν = 0.30</span></li>
+              </ul></div>
+            </div>
+          </div>
+          <div class="proj-ctas">
+            <a class="btn-sm btn-sm-primary" href="Jules_VanCauwenberghe_Engineering_Portfolio.pdf">
+              <span data-en>Full portfolio</span><span data-fr>Portfolio complet</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
