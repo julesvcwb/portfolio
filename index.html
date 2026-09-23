@@ -181,6 +181,17 @@ footer{border-top:0.5px solid var(--border);padding:28px 0}
   .about-grid{grid-template-columns:1fr!important}
 }
 svg{display:block}
+
+/* CHEVRON HINT ANIMATION */
+@keyframes chevronHint{
+  0%,60%,100%{transform:translateY(0)}
+  30%{transform:translateY(3px)}
+}
+.proj-chevron.hint{animation:chevronHint 1.8s ease-in-out infinite}
+.project-card:hover .proj-chevron.hint{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){
+  .proj-chevron.hint{animation:none}
+}
 </style>
 </head>
 <body>
@@ -225,20 +236,20 @@ svg{display:block}
   </div>
   <h1 class="hero-name">Jules Van Cauwenberghe</h1>
   <p class="hero-sub">
-    <span data-en>Structural design and system integration across railway and robotic systems — from concept to pre-industrial delivery, under real safety and regulatory constraints.</span>
-    <span data-fr>Conception structurelle et intégration système dans les domaines ferroviaire et robotique — du concept au livrable pré-industriel, sous contraintes réelles de sécurité et de réglementation.</span>
+    <span data-en>Structural design and risk engineering across railway and robotic systems — now applied to energy systems and nuclear safety as part of an MSc at ETH Zürich.</span>
+    <span data-fr>Conception structurelle et ingénierie du risque dans les domaines ferroviaire et robotique — désormais appliquées aux systèmes énergétiques et à la sûreté nucléaire dans le cadre d'un MSc à l'ETH Zürich.</span>
   </p>
   <div class="hero-badges">
     <span class="badge badge-avail">
       <span class="badge-dot"></span>
-      <span data-en>Available from September 2026</span>
-      <span data-fr>Disponible dès septembre 2026</span>
+      <span data-en>Open to part-time opportunities</span>
+      <span data-fr>Ouvert aux opportunités à temps partiel</span>
     </span>
     <span class="badge badge-eth">
-      <span data-en>M.Sc. Mechanical Engineering · ETH Zürich · Sep 2026</span>
-      <span data-fr>M.Sc. Génie Mécanique · ETH Zürich · Sep 2026</span>
+      <span data-en>M.Sc. Mechanical Engineering · ETH Zürich · Sep 2026 – Present</span>
+      <span data-fr>M.Sc. Génie Mécanique · ETH Zürich · depuis Sep 2026</span>
     </span>
-    <span class="badge">Lausanne, Switzerland</span>
+    <span class="badge">Zurich, Switzerland</span>
     <span class="badge">
       <span data-en>EPFL BSc · Jun 2026</span>
       <span data-fr>BSc EPFL · Juin 2026</span>
@@ -252,7 +263,7 @@ svg{display:block}
     </a>
     <a class="btn-ghost" href="Van_Cauwenberghe_CV.pdf">CV</a>
     <a class="btn-ghost" href="https://www.linkedin.com/in/jules-van-cauwenberghe">LinkedIn</a>
-    <a class="btn-ghost" href="mailto:jules.vancauwenberghe@epfl.ch">Email</a>
+    <a class="btn-ghost" href="mailto:jvancauwenbe@student.ethz.ch">Email</a>
   </div>
 </section>
 
@@ -286,9 +297,9 @@ svg{display:block}
         <div class="proj-right">
           <div class="proj-tags">
             <span class="tag tag-teal">FEA</span>
-            <span class="tag tag-teal">32 trainsets</span>
+            <span class="tag tag-teal">22-unit fleet</span>
           </div>
-          <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="proj-chevron hint" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
       </div>
       <div class="proj-body">
@@ -316,21 +327,22 @@ svg{display:block}
           </div>
 
           <div class="proj-metrics">
-            <div class="metric"><div class="metric-val">32</div><div class="metric-label"><span data-en>trainsets analysed</span><span data-fr>rames analysées</span></div></div>
+            <div class="metric"><div class="metric-val">22</div><div class="metric-label"><span data-en>M1 fleet units</span><span data-fr>unités flotte M1</span></div></div>
             <div class="metric"><div class="metric-val">3</div><div class="metric-label"><span data-en>fleet generations</span><span data-fr>générations de flotte</span></div></div>
+            <div class="metric"><div class="metric-val">×4.2–7.8</div><div class="metric-label"><span data-en>fatigue safety factor</span><span data-fr>facteur sécurité (fatigue)</span></div></div>
           </div>
 
           <div class="proj-grid">
             <div>
               <div class="proj-col-label"><span data-en>What was done</span><span data-fr>Ce qui a été fait</span></div>
               <div class="proj-col-body"><ul>
-                <li><span data-en>Identified real passenger safety issue on M1 and proposed the project to TL independently</span><span data-fr>Identification d'un problème réel de sécurité sur la M1 et proposition autonome du projet aux TL</span></li>
+                <li><span data-en>Personally identified a real passenger safety gap on the M1 — a standing area with no accessible handrail — and independently initiated the project with TL, within a 2-person team</span><span data-fr>Identification personnelle d'un vrai manque de sécurité sur la M1 — une zone sans main courante accessible — et initiative autonome du projet avec les TL, au sein d'une équipe de 2 personnes</span></li>
                 <li><span data-en>Benchmark of metro handrail systems across Europe (Paris, CAF, Siemens, Alstom)</span><span data-fr>Benchmark des systèmes de mains courantes en Europe (Paris, CAF, Siemens, Alstom)</span></li>
                 <li><span data-en>Reverse engineering of 3 rolling stock generations — structural interfaces and attachment constraints</span><span data-fr>Rétro-ingénierie de 3 générations de matériel roulant — interfaces structurelles et contraintes de fixation</span></li>
                 <li><span data-en>CAD concept development of new handrail configurations (Fusion 360 / Inventor)</span><span data-fr>Développement de concepts CAO de nouvelles configurations de mains courantes (Fusion 360 / Inventor)</span></li>
                 <li><span data-en>Load case definition: vertical, lateral and dynamic passenger-induced loads</span><span data-fr>Définition des cas de charge : efforts passagers verticaux, latéraux et dynamiques</span></li>
                 <li><span data-en>Normative framework: EN 45545, Swiss OFT/LHand regulations, accessibility standards</span><span data-fr>Cadre normatif : EN 45545, réglementation OFT/LHand suisse, normes d'accessibilité</span></li>
-                <li><span data-en>Supplier sourcing, cost estimation, risk analysis — complete pre-industrial technical dossier</span><span data-fr>Sourcing fournisseurs, estimation des coûts, analyse des risques — dossier technique pré-industriel complet</span></li>
+                <li><span data-en>Identified and contacted 8 qualified Swiss suppliers; cost estimation and formal risk analysis — complete pre-industrial technical dossier</span><span data-fr>Identification et prise de contact avec 8 fournisseurs suisses qualifiés ; estimation des coûts et analyse formelle des risques — dossier technique pré-industriel complet</span></li>
               </ul></div>
             </div>
             <div>
@@ -339,9 +351,8 @@ svg{display:block}
                 <li>Fusion 360 — CAD</li>
                 <li>Inventor — <span data-en>structural interfaces</span><span data-fr>interfaces structurelles</span></li>
                 <li>FEA — <span data-en>structural validation</span><span data-fr>validation structurelle</span></li>
-                <li>EN 45545 (<span data-en>fire–smoke</span><span data-fr>feu–fumée</span>)</li>
+                <li><span data-en>5 EN standards (fire–smoke, structural loads, accessibility)</span><span data-fr>5 normes EN (feu–fumée, charges structurelles, accessibilité)</span></li>
                 <li><span data-en>Swiss OFT / LHand regulations</span><span data-fr>Réglementation suisse OFT / LHand</span></li>
-                <li><span data-en>Accessibility standards</span><span data-fr>Normes d'accessibilité</span></li>
               </ul></div>
             </div>
           </div>
@@ -370,7 +381,7 @@ svg{display:block}
             <div class="proj-name">
               <span data-en>Robotic arm structural redesign — EPFL Xplore</span>
               <span data-fr>Reconception structurelle du bras robotique — EPFL Xplore</span>
-              <span class="pill pill-blue">ERC 2025 winner</span>
+              <span class="pill pill-blue">ERC 2026 winner</span>
             </div>
             <div class="proj-sub">
               <span data-en>European Rover Challenge · sole structural engineer · −25% mass</span>
@@ -383,7 +394,7 @@ svg{display:block}
             <span class="tag tag-blue">FEA · Fusion 360</span>
             <span class="tag tag-blue">−750 g</span>
           </div>
-          <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="proj-chevron hint" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
       </div>
       <div class="proj-body">
@@ -452,7 +463,7 @@ svg{display:block}
             <span class="tag">Arduino</span>
             <span class="tag">OpenCV</span>
           </div>
-          <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="proj-chevron hint" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
       </div>
       <div class="proj-body">
@@ -512,7 +523,7 @@ svg{display:block}
             <span class="tag">Abaqus</span>
             <span class="tag">FEM</span>
           </div>
-          <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="proj-chevron hint" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
       </div>
       <div class="proj-body">
@@ -576,7 +587,7 @@ svg{display:block}
             <span class="tag">CATIA V5</span>
             <span class="tag">GD&T</span>
           </div>
-          <svg class="proj-chevron" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="proj-chevron hint" width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
       </div>
       <div class="proj-body">
@@ -620,8 +631,8 @@ svg{display:block}
     <div class="stat-lbl"><span data-en>structural mass · ERC rover arm</span><span data-fr>masse structurelle · bras rover ERC</span></div>
   </div>
   <div class="stat">
-    <div class="stat-val">32</div>
-    <div class="stat-lbl"><span data-en>trainsets analysed · TL project</span><span data-fr>rames analysées · projet TL</span></div>
+    <div class="stat-val">22</div>
+    <div class="stat-lbl"><span data-en>M1 fleet units · TL project</span><span data-fr>unités flotte M1 · projet TL</span></div>
   </div>
   <div class="stat">
     <div class="stat-val">3</div>
@@ -704,7 +715,7 @@ svg{display:block}
         <div class="tl-item">
           <div class="tl-left"><div class="tl-dot active"></div><div class="tl-line"></div></div>
           <div class="tl-right">
-            <div class="tl-period">Sep 2025 — May 2026</div>
+            <div class="tl-period">Sep 2025 — Present</div>
             <div class="tl-role"><span data-en>Mechanical design engineer · Robotic arm</span><span data-fr>Ingénieur conception mécanique · Bras robotique</span></div>
             <div class="tl-org"><img src="logo-xplore.jpg" alt="Xplore" class="tl-logo" onerror="this.style.display='none'">EPFL Xplore — ERC</div>
           </div>
@@ -718,19 +729,11 @@ svg{display:block}
           </div>
         </div>
         <div class="tl-item">
-          <div class="tl-left"><div class="tl-dot future"></div><div class="tl-line"></div></div>
+          <div class="tl-left"><div class="tl-dot active"></div></div>
           <div class="tl-right">
-            <div class="tl-period">Sep 2026 — 2028</div>
-            <div class="tl-role"><span data-en>MSc Mechanical Engineering <span style="font-size:11px;color:var(--text3)">(planned)</span></span><span data-fr>MSc Génie Mécanique <span style="font-size:11px;color:var(--text3)">(prévu)</span></span></div>
+            <div class="tl-period">Sep 2026 — Present</div>
+            <div class="tl-role"><span data-en>MSc Mechanical Engineering — Energy Specialization</span><span data-fr>MSc Génie Mécanique — Spécialisation Énergie</span></div>
             <div class="tl-org"><img src="logo-eth.png" alt="ETH" class="tl-logo" onerror="this.style.display='none'">ETH Zürich</div>
-          </div>
-        </div>
-        <div class="tl-item">
-          <div class="tl-left"><div class="tl-dot future"></div></div>
-          <div class="tl-right">
-            <div class="tl-period"><span data-en>Available from Sep 2026</span><span data-fr>Disponible dès sep 2026</span></div>
-            <div class="tl-role"><span data-en>Gap-year internship</span><span data-fr>Stage année de césure</span></div>
-            <div class="tl-org"><span data-en>Systems engineering · energy · consulting</span><span data-fr>Ingénierie systèmes · énergie · conseil</span></div>
           </div>
         </div>
       </div>
@@ -738,17 +741,17 @@ svg{display:block}
     <div>
       <div class="proj-col-label" style="margin-bottom:14px"><span data-en>Profile</span><span data-fr>Profil</span></div>
       <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:16px">
-        <span data-en>Mechanical engineering student at EPFL with hands-on experience delivering railway and robotic systems from concept to pre-industrial development. Focused on structural design and system integration under real manufacturing, safety, and regulatory constraints.</span>
-        <span data-fr>Étudiant en génie mécanique à l'EPFL, avec une expérience concrète dans la livraison de systèmes ferroviaires et robotiques du concept au développement pré-industriel. Orienté conception structurelle et intégration système sous contraintes réelles.</span>
+        <span data-en>Mechanical engineering graduate (EPFL) pursuing an MSc at ETH Zürich, specializing in energy systems and risk engineering. Hands-on experience delivering railway and robotic systems from concept to pre-industrial development, under real regulatory, structural and operational constraints.</span>
+        <span data-fr>Diplômé en génie mécanique (EPFL), poursuivant un MSc à l'ETH Zürich avec une spécialisation en systèmes énergétiques et ingénierie du risque. Expérience concrète dans la livraison de systèmes ferroviaires et robotiques du concept au développement pré-industriel, sous contraintes réelles réglementaires, structurelles et opérationnelles.</span>
       </p>
       <p style="font-size:14px;color:var(--text2);line-height:1.7;margin-bottom:24px">
-        <span data-en>Available from September 2026 for a gap year internship before starting an M.Sc. at ETH Zürich — targeting systems engineering, product development, or engineering consulting in high-reliability environments.</span>
-        <span data-fr>Disponible dès septembre 2026 pour un stage de césure avant un MSc à l'ETH Zürich — visant l'ingénierie systèmes, le développement produit ou le conseil en ingénierie dans des environnements à haute fiabilité.</span>
+        <span data-en>Open to part-time opportunities alongside MSc studies, in energy risk analysis, energy systems engineering, or nuclear safety within high-reliability environments.</span>
+        <span data-fr>Ouvert aux opportunités à temps partiel pendant le MSc, dans l'analyse de risque énergétique, l'ingénierie des systèmes énergétiques ou la sûreté nucléaire, au sein d'environnements à haute fiabilité.</span>
       </p>
       <div class="proj-col-label" style="margin-bottom:10px"><span data-en>Beyond engineering</span><span data-fr>En dehors de l'ingénierie</span></div>
       <p style="font-size:14px;color:var(--text2);line-height:1.7">
-        <span data-en>Competitive rugby at the highest French national youth level (Alamercery / Crabos), Normandy regional selection. Academic tutoring in mathematics and physics.</span>
-        <span data-fr>Rugby de compétition au plus haut niveau national jeune en France (Alamercery / Crabos), sélection régionale de Normandie. Tutorat académique en mathématiques et physique.</span>
+        <span data-en>Competitive rugby at the highest French national youth level (Alamercery / Crabos), Normandy regional selection. Also triathlon, marathon, cycling. Academic tutoring in mathematics and physics.</span>
+        <span data-fr>Rugby de compétition au plus haut niveau national jeune en France (Alamercery / Crabos), sélection régionale de Normandie. Également triathlon, marathon, cyclisme. Tutorat académique en mathématiques et physique.</span>
       </p>
     </div>
   </div>
@@ -764,7 +767,7 @@ svg{display:block}
     <span class="footer-text">© 2026 Jules Van Cauwenberghe</span>
   </div>
   <div class="footer-links">
-    <a class="footer-link" href="mailto:jules.vancauwenberghe@epfl.ch">jules.vancauwenberghe@epfl.ch</a>
+    <a class="footer-link" href="mailto:jvancauwenbe@student.ethz.ch">jvancauwenbe@student.ethz.ch</a>
     <a class="footer-link" href="https://www.linkedin.com/in/jules-van-cauwenberghe">LinkedIn</a>
   </div>
 </div>
@@ -784,6 +787,9 @@ function toggle(header){
   const chevron=header.querySelector('.proj-chevron');
   const open=body.classList.toggle('open');
   chevron.style.transform=open?'rotate(180deg)':'';
+  // Once the person has opened any card, they understand the interaction —
+  // stop the hint animation on every chevron so it doesn't linger and distract.
+  document.querySelectorAll('.proj-chevron.hint').forEach(c=>c.classList.remove('hint'));
 }
 (function(){
   const saved=localStorage.getItem('lang')||'en';
