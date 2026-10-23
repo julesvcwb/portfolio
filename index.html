@@ -122,6 +122,12 @@ nav.top{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--pap
 .proj:last-child{border-bottom:0}
 .proj-meta{font-size:14px;color:var(--ink2);line-height:1.5}
 .proj-logo{height:26px;width:auto;object-fit:contain;display:block;margin-bottom:12px}
+.proj-logos{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:14px}
+.proj-logos .proj-logo{margin:0}
+.proj-logo.l-en{height:30px}
+.proj-logo.l-cimo{height:38px}
+@media(prefers-color-scheme:dark){.l-en,.tl-org .l-en{filter:invert(1)}}
+.tl-org img.l-en{height:18px}
 .proj-logo[src="logo-xplore.jpg"]{background:#0d1b2a;border-radius:4px;padding:3px 7px;height:30px}
 .proj-meta .period{font-weight:600;color:var(--ink);display:block}
 .proj-meta .ctx{display:block;margin-top:2px}
@@ -346,6 +352,10 @@ footer{margin-top:72px;border-top:2px solid var(--rule-strong);padding:26px 0 40
   <!-- ADAPT / CIMO -->
   <article class="proj now" id="adapt">
     <div class="proj-meta">
+      <div class="proj-logos">
+        <img class="proj-logo l-en" src="logo-energynow.png" alt="Energy Now!, an impact accelerator at ETH Zurich" onerror="this.style.display='none'">
+        <img class="proj-logo l-cimo" src="logo-cimo.png" alt="CIMO" onerror="this.style.display='none'">
+      </div>
       <span class="period"><span data-en>Oct 2026 to present</span><span data-fr>Oct. 2026 à aujourd'hui</span></span>
       <span class="ctx"><span data-en>Energy Now!, ETH Zürich</span><span data-fr>Energy Now!, ETH Zürich</span></span>
       <div class="tags"><span class="tag">Optimization</span><span class="tag">Heat pumps</span><span class="tag">E-boilers</span></div>
@@ -769,7 +779,7 @@ footer{margin-top:72px;border-top:2px solid var(--rule-strong);padding:26px 0 40
         <div>
           <div class="tl-period"><span data-en>Oct 2026 to present</span><span data-fr>Oct. 2026 à aujourd'hui</span></div>
           <div class="tl-role"><span data-en>Project coordinator and energy-system modeler, ADAPT for CIMO (in progress)</span><span data-fr>Coordinateur de projet et modélisateur énergétique, ADAPT pour CIMO (en cours)</span></div>
-          <div class="tl-org"><span data-en>Energy Now!, ETH Zürich impact accelerator</span><span data-fr>Energy Now!, accélérateur d'impact de l'ETH Zürich</span></div>
+          <div class="tl-org"><img class="l-en" src="logo-energynow.png" alt="" onerror="this.style.display='none'"><span data-en>Energy Now!, ETH Zürich impact accelerator</span><span data-fr>Energy Now!, accélérateur d'impact de l'ETH Zürich</span></div>
         </div>
       </li>
       <li>
